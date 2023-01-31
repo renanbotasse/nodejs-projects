@@ -5,7 +5,7 @@ import { Configuration, OpenAIApi } from "openai"
 dotenv.config()
 
 create({
-    session: 'Chat-GPT',
+    session: 'Whatsapp-Bot-GPT',
     multidevice: true
 })
     .then((client) => start(client))
@@ -34,9 +34,9 @@ const getDavinciResponse = async (clientText) => {
         response.data.choices.forEach(({ text }) => {
             botResponse += text
         })
-        return `Chat GPT 🤖\n\n ${botResponse.trim()}`
+        return `From GPT 🤖:\n ${botResponse.trim()}`
     } catch (e) {
-        return `❌ OpenAI Response Error: ${e.response.data.error.message}`
+        return `Error: ${e.response.data.error.message}`
     }
 }
 
@@ -51,7 +51,7 @@ const getDalleResponse = async (clientText) => {
         const response = await openai.createImage(options);
         return response.data.data[0].url
     } catch (e) {
-        return `❌ OpenAI Response Error: ${e.response.data.error.message}`
+        return `Error: ${e.response.data.error.message}`
     }
 }
 
@@ -78,7 +78,7 @@ const commands = (client, message) => {
                     message.from === process.env.BOT_NUMBER ? message.to : message.from,
                     imgUrl,
                     imgDescription,
-                    'Imagem gerada pela IA DALL-E 🤖'
+                    'From IA DALL-E 🤖'
                 )
             })
             break;
