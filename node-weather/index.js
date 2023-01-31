@@ -1,14 +1,16 @@
 let request = require('request');
+const argv = require('yargs').argv;
 
-let apiKey = '**************************+';
-let lat = '45.4783';
-let lon = '9.124'
-let url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}`
+let apiKey = '**************************';
+let city = argv.c || 'milan';
+let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
 
 request(url, function (err, response, body) {
   if(err){
     console.log('error:', error);
   } else {
-    console.log('body:', body);
+    let weather = JSON.parse(body)
+    let message = `It's ${weather.main.temp} degrees in ${weather.name}!`;
+    console.log(message);
   }
 });
