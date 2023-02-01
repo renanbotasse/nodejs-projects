@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=V8dYGNfHjfk&ab_channel=TechyWebDev
 ## All in One
 https://medium.com/geekculture/all-in-one-social-media-page-with-node-js-3bfc8e953653
 
-## Steaming Server
+## Streaming Server
 https://www.codeproject.com/Articles/5350209/Build-Your-Own-Video-Streaming-Server-with-Node-js#video-player
 
 ## CRUD
