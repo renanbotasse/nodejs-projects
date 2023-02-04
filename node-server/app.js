@@ -44,7 +44,7 @@ function checkToken(req, res, next) {
 		jwt.verify(token, secret)
 		next()
 	} catch(error) {
-		res.status(400).json({ msg; "Token Fail" })
+		res.status(400).json({ msg: "Token Fail" })
 	}
 }
 
