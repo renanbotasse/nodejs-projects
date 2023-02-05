@@ -9,6 +9,7 @@
 ## Whatsapp Bot (GPT/DALL-E)
 
 
-## Loguin
+## Loguin Terminal
 
-## Server
+
+## Loguin Website
