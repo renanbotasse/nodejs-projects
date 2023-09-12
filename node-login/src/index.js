@@ -11,7 +11,7 @@ app.use(express.json())
 app.set('view engine', 'hbs')
 app.set('views', templatePath)
 app.get('/', (req, res) => {
-	res.render('loguin')
+	res.render('login')
 })
 
 app.get('/signup', (req, res) => {
